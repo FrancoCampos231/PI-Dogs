@@ -89,9 +89,9 @@ const getDogsById = async (id) => {
 
 };
 
-const createDogsDB = async (name, image, height, weight, year, temperament, origin, breed_group,) => {
+const createDogsDB = async (name, image, height, weight, years, temperament, origin, breedGroup,) => {
 
-    const createDogs = await Dog.create({name, image, height, weight, year, temperament, origin, breed_group});
+    const createDogs = await Dog.create({name, image, height, weight, years, temperament, origin, breedGroup});
 
     const allTemperament = await Temperament.findAll({
         where: {name : temperament}

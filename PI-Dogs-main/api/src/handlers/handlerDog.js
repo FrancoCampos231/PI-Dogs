@@ -21,9 +21,9 @@ const getDogId = async (req, res) => {
 };
 
 const createDogs = async (req, res) => {
-    const {name, image, height, wieght, year, temperament, origin, breed_group} = req.body;
+    const {name, image, height, weight, years, temperament, origin, breedGroup} = req.body;
 
-    const response = await createDogsDB(name, image, height, wieght, year, temperament, origin, breed_group);
+    const response = await createDogsDB(name, image, height, weight, years, temperament, origin, breedGroup);
     try {
         res.status(202).json(response);
     } catch (error) {

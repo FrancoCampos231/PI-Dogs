@@ -30,6 +30,12 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    origin: {
+      type: DataTypes.STRING,
+    },
+    breedGroup: {
+      type: DataTypes.STRING,
+    },
   }, {
     timestamps: false,
     freezeTableName: true,
