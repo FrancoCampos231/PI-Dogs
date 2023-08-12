@@ -1,0 +1,15 @@
+.card-cont{
+    background-color: rgb(33, 218, 181);
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border: solid 2px rgb(19, 149, 77);
+    border-radius: 15px;
+}
+
+.card-title-cont{
+
+}

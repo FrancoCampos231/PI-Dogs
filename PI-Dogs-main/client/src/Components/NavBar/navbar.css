@@ -1,0 +1,13 @@
+.nav-cont {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.nav-link-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+}

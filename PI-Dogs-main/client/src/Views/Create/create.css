@@ -1,0 +1,19 @@
+.create-cont form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-cont form input{
+    width: 15rem;
+}
+
+.create-button{
+    margin: 2rem;
+    background-color: rgb(171, 105, 207);
+}
+
+.create-error{
+    color: red;
+}

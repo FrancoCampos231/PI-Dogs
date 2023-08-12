@@ -1,0 +1,9 @@
+.cards-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-cont{
+    text-align: center;
+}
