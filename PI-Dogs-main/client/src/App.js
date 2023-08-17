@@ -13,12 +13,11 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Route path={'*'} component={NavBar}/>
       <Switch>
         <Route exact path={'/'} component={Landing}/>
         <Route path={'/home'} component={Home}/>
         <Route path={'/create'} component={Create}/>
-        <Route path={'/detail'} component={Detail}/>
+        <Route path={'/detail/:id'} component={Detail}/>
       </Switch>
       </BrowserRouter>
     </div>

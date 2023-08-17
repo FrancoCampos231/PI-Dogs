@@ -6,7 +6,7 @@ import './cards.css'
 const Cards = ({info}) => {
   return (
     <div className='cards-cont'>
-        {info.map((user) => <Card name={user.nombre} email={user.email} phone={user.phone}/>)}
+        {info?.map((dog) => <Card name={dog.name} image={dog.image} weight={dog.weight} temperament={dog.temperament} id={dog.id}/>)}
     </div>
   )
 }

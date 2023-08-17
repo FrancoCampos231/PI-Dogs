@@ -8,8 +8,27 @@
     margin: 1rem;
     border: solid 2px rgb(19, 149, 77);
     border-radius: 15px;
+
 }
 
 .card-title-cont{
+    color: rgb(234, 206, 227);
+    text-decoration: none;
+    
+}
 
+.card-title-cont:hover {
+    color:rgb(233, 110, 203)
+}
+
+.card-title-cont:link {
+    text-decoration: none;
+}
+
+.card-title-cont:visited {
+    text-decoration: none;
+}
+
+.card-title-cont:active {
+    text-decoration: none;
 }

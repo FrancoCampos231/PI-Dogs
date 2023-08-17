@@ -1,13 +1,16 @@
 .nav-cont {
-    background-color: aqua;
+    background-color: rgb(133, 245, 245);
     display: flex;
     justify-content: space-around;
     height: 2.5rem;
     align-items: center;
+    font-family: cursive;
 }
 
 .nav-link-cont {
     display: flex;
     justify-content: space-between;
     width: 30rem;
+    font-family: cursive;
+    text-decoration: none;
 }

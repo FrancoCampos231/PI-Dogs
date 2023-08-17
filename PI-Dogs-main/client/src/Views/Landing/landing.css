@@ -1,0 +1,27 @@
+.cont-landing{
+    background-image: url('../../Image/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.landing-text{
+    font-size: 48px;
+    font-family: cursive;
+    color: rgb(255, 162, 171);
+    display: flex;
+    justify-content: baseline;
+}
+
+.button-general{
+    border-color: lightgreen;
+    background-color: aquamarine;
+    font-family: cursive;
+    border-radius: 5px;
+}
