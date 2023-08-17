@@ -1,6 +1,7 @@
 .card-cont{
     background-color: rgb(33, 218, 181);
     width: 15rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,27 +9,28 @@
     margin: 1rem;
     border: solid 2px rgb(19, 149, 77);
     border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
 
 }
 
+.card-cont p{
+    font-size: 14px;
+    text-overflow: 1.2;
+    color: rgb(3, 75, 60);
+    text-decoration: none;
+}
+
+.card-cont:link {
+    text-decoration: none;
+}
+
 .card-title-cont{
-    color: rgb(234, 206, 227);
+    color: rgb(7, 16, 57);
     text-decoration: none;
     
 }
 
-.card-title-cont:hover {
-    color:rgb(233, 110, 203)
-}
-
-.card-title-cont:link {
-    text-decoration: none;
-}
-
-.card-title-cont:visited {
-    text-decoration: none;
-}
-
-.card-title-cont:active {
+.card-cont Link{
     text-decoration: none;
 }

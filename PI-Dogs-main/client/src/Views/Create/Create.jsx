@@ -65,6 +65,7 @@ const Create = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(postDog(state));
+    alert('Congratulation!!! This Dog Create')
     console.log(state)
   }
 
@@ -86,7 +87,11 @@ const Create = () => {
 
   const validate = (state, name) => {
     if (name === 'name') {
-      if(state.name !== '') setError({...error, name: ''})
+      if(state.name !== '') {
+        if(state.name.length > 30) setError({...error, name: 'Debe tener menos de 30 carateres'})
+        else setError({...error, name: ''})
+      }
+        
       else setError({...error, name: 'Campo requerido'})
     };
     if (name === 'image') {
@@ -178,77 +183,94 @@ const Create = () => {
   return (
     <div className='create-cont'>
       <NavBar/>
+      <h1>Create Dog: </h1>
       <form onSubmit={handleSubmit}>
-        <label >Name:</label>
+        <label className='home-text'>Name:</label>
         <input name='name' onChange={handlerChange} type="text" className='create-cont-input'/>
         <label className='create-error'>{error.name}</label>
-        <label >Image:</label>
+        <label className='home-text'>Image:</label>
         <input name='image' onChange={handlerChange} type="text" className='create-cont-input'/>
         <label className='create-error'>{error.image}</label>
-        <div>
-          <label >Height</label>
-          <label >Min:</label>
-          <input name='heightMin' onChange={handlerChange} type="text" className='create-cont-input'/>
-          <label className='create-error'>{error.heightMin}</label>
+          <label className='home-text'>Height</label>
+        <div className='create-cont-select'>
+          <div className='create-cont-items'>
+            <label >Min:</label>
+            <input name='heightMin' onChange={handlerChange} type="text" className='create-cont-input'/>
+            <label className='create-error'>{error.heightMin}</label>
+          </div>
           <label>-</label>
-          <label >Max:</label>
-          <input name='heightMax' onChange={handlerChange} type="text" className='create-cont-input'/>
-          <label className='create-error'>{error.heightMax}</label>
+          <div className='create-cont-items'>
+            <label >Max:</label>
+            <input name='heightMax' onChange={handlerChange} type="text" className='create-cont-input'/>
+            <label className='create-error'>{error.heightMax}</label>
+          </div>
         </div>
-        <div>
-          <label >Weight</label>
-          <label >Min:</label>
-          <input name='weightMin' onChange={handlerChange} type="text" className='create-cont-input'/>
-          <label className='create-error'>{error.weightMin}</label>
+          <label className='home-text'>Weight</label>
+        <div className='create-cont-select'>
+          <div className='create-cont-items'>
+            <label >Min:</label>
+            <input name='weightMin' onChange={handlerChange} type="text" className='create-cont-input'/>
+            <label className='create-error'>{error.weightMin}</label>
+          </div>
           <label>-</label>
-          <label >Max:</label>
-          <input name='weightMax' onChange={handlerChange} type="text" className='create-cont-input'/>
-          <label className='create-error'>{error.weightMax}</label>
+          <div className='create-cont-items'>
+            <label >Max:</label>
+            <input name='weightMax' onChange={handlerChange} type="text" className='create-cont-input'/>
+            <label className='create-error'>{error.weightMax}</label>
+          </div>
         </div>
-        <label >Years:</label>
+        <label className='home-text'>Years:</label>
         <input name='year' onChange={handlerChange} type="text" className='create-cont-input'/>
         <label className='create-error'>{error.year}</label>
-        <label >Origin:</label>
+        <label className='home-text'>Origin:</label>
         <input name='origin'  onChange={handlerChange} type="text" className='create-cont-input'/>
         <label ></label>
-        <label >Group:</label>
+        <label className='home-text'>Group:</label>
         <input name='breedGroup' onChange={handlerChange} type="text" className='create-cont-input'/>
         <label ></label>
-        <label >Temperament: </label>
-        <select name="temp1" onChange={handlerChange} defaultValue={selected}>
-          <option value="Select" >Select</option>
-          {temperamentDogs.map((t) => {
-            if(t.id <= 41) {
-              return (
-                <option value={t.name} key={t.id}>{t.name}</option>
-              )
-            }
-          }) }
-        </select>
-        <label className='create-error'>{error.temp1}</label>
-        <select name="temp2" onChange={handlerChange} defaultValue={selected}>
-          <option value="Select" >Select</option>
-          {temperamentDogs.map((t) => {
-            if(t.id > 41 && t.id <=81) {
-              return (
-                <option value={t.name} key={t.id}>{t.name}</option>
-              )
-            }
-          }) }
-        </select>
-        <label className='create-error'>{error.temp2}</label>
-        <select name="temp3" onChange={handlerChange} defaultValue={selected}>
-          <option value="Select" >Select</option>
-          {temperamentDogs.map((t) => {
-            if(t.id >= 82) {
+        <label className='home-text'>Temperament: </label>
+        <div className='create-cont-select'>
+          <div className='create-cont-items'>
+            <select name="temp1" onChange={handlerChange} defaultValue={selected}>
+              <option value="Select" >Select</option>
+              {temperamentDogs.map((t) => {
+                if(t.id <= 41) {
+                  return (
+                    <option value={t.name} key={t.id}>{t.name}</option>
+                  )
+                }
+              }) }
+            </select>
+            <label className='create-error'>{error.temp1}</label>
+          </div>
+          <div className='create-cont-items'>
+            <select name="temp2" onChange={handlerChange} defaultValue={selected}>
+              <option value="Select" >Select</option>
+              {temperamentDogs.map((t) => {
+                if(t.id > 41 && t.id <=81) {
+                  return (
+                    <option value={t.name} key={t.id}>{t.name}</option>
+                  )
+                }
+              }) }
+            </select>
+            <label className='create-error'>{error.temp2}</label>
+          </div>
+          <div className='create-cont-items'>
+            <select name="temp3" onChange={handlerChange} defaultValue={selected}>
+              <option value="Select" >Select</option>
+              {temperamentDogs.map((t) => {
+                if(t.id >= 82) {
 
-              return (
-                <option value={t.name} key={t.id}>{t.name}</option>
-              )
-            }
-          }) }
-        </select>
-        <label className='create-error'>{error.temp3}</label>
+                  return (
+                    <option value={t.name} key={t.id}>{t.name}</option>
+                  )
+                }
+              }) }
+            </select>
+            <label className='create-error'>{error.temp3}</label>
+          </div>
+        </div>
 
         <input disabled={disable()}className='create-button'  type="submit" />
       </form>

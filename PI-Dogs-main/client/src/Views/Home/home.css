@@ -1,0 +1,12 @@
+.select-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px;
+}
+
+.home-text{
+    font-family: cursive;
+    color: rgb(255, 162, 171);
+    font-size: 20px;
+}

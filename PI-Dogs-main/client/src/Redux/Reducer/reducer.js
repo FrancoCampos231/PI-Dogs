@@ -71,7 +71,7 @@ function rootReducer(state = initialState, action){
             }
         case FILTER_WEIGHT: 
             if(action.payload === 'Min') {
-                const allWeightOrder = [...state.allDogs].sort((min, max) => {
+                const allWeightOrder = [...state.filterDogs].sort((min, max) => {
                     const menor = min.weight.split('-');
                     const mayor = max.weight.split('-');
                     if(parseInt(menor[0]) > parseInt(mayor[0])) return 1;
@@ -85,7 +85,7 @@ function rootReducer(state = initialState, action){
                     currentPage: 0
                 }
             } else if(action.payload === 'Max') {
-                const allWeightOrder = [...state.allDogs].sort((min, max) => {
+                const allWeightOrder = [...state.filterDogs].sort((min, max) => {
                     const menor = min.weight.split('-');
                     const mayor = max.weight.split('-');
                     if(parseInt(menor[0]) > parseInt(mayor[0])) return -1;
@@ -110,7 +110,7 @@ function rootReducer(state = initialState, action){
             if(action.payload === 'All') {
                 return {
                     ...state,
-                    allDogs: [...state.filterDogs].slice(0, ItemsForPage),
+                    allDogs: [...state.allDogsBackUp].slice(0, ItemsForPage),
                     filterDogs: [...state.allDogsBackUp],
                 }
             }

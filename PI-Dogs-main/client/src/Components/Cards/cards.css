@@ -8,3 +8,11 @@
 .home-cont{
     text-align: center;
 }
+
+.home-cont h1{
+    font-size: 48px;
+    font-family: cursive;
+    color: rgb(255, 162, 171);
+    display: flex;
+    justify-content: center;
+}

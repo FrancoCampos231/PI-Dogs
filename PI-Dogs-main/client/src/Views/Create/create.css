@@ -5,6 +5,14 @@
     align-items: center;
 }
 
+.create-cont h1{
+    font-size: 48px;
+    font-family: cursive;
+    color: rgb(255, 162, 171);
+    display: flex;
+    justify-content: center;
+}
+
 .create-cont-input{
     width: 15rem;
 }
@@ -27,4 +35,19 @@
     width: 2.5rem;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.create-cont-select{
+    width: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.create-cont-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
